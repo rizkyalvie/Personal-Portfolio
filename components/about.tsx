@@ -3,23 +3,21 @@
 import React from "react";
 import SectionHeading from "./section-heading";
 
-import { motion, useScroll } from "framer-motion"
-import { useRef } from "react";
+import { useSectionInView, useScrollAnimation } from "@/lib/hooks";
+import { motion } from "framer-motion"
 
 function About() {
-  
-    const ref = useRef<HTMLDivElement>(null)
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ['0 1', '1 1']
-    })
+
+  const { ref } = useSectionInView('About', 0.8)
+  const { animationRef, scrollYProgress } = useScrollAnimation('1 1')
 
   return (
     <motion.section 
         id='about'
+        ref={ref} 
     >
       <motion.div 
-        ref={ref} 
+        ref={animationRef} 
         className="mt-28 mb-28 max-w-[45rem] text-center leading-8 max-sm:mt-16"
         style={{
             scale: scrollYProgress,

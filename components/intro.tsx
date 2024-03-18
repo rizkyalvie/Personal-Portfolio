@@ -1,19 +1,24 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
+import { motion } from "framer-motion";
+import { HiDownload } from "react-icons/hi";
+import { useSectionInView } from "@/lib/hooks";
 import { FaGithubSquare } from "react-icons/fa";
 import { BsLinkedin, BsArrowRight } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-import { motion } from "framer-motion";
 
 function Intro() {
+
+  const { ref } = useSectionInView('Home', 0.5)
+
   return (
     <section 
       className="mb-28 max-w-[45rem] text-center sm:mb-0 scroll-mt-28"
       id='home'
+      ref={ref}
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -47,7 +52,7 @@ function Intro() {
         <span className="font-bold">Frontend Developer</span>.
         {" I enjoy building "}
         <span className="italic">sites & apps</span>.
-        {" I also enjoy tinkering with Front End "}
+        {" I also enjoy tinkering with Frontend "}
         <span className="italic">frameworks & libraries</span>.{" My focus is "}
         <span className="underline">React (Next.js)</span>.
       </motion.h1>
