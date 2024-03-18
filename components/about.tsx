@@ -7,20 +7,25 @@ import { motion, useScroll } from "framer-motion"
 import { useRef } from "react";
 
 function About() {
-    const ref = useRef<HTMLElement>(null)
+  
+    const ref = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ['0 1', '1.31 1']
+        offset: ['0 1', '1 1']
     })
+
   return (
     <motion.section 
+        id='about'
+    >
+      <motion.div 
         ref={ref} 
-        className="mt-28 mb-28 max-w-[45rem] text-center leading-8 sm:mb-40"
+        className="mt-28 mb-28 max-w-[45rem] text-center leading-8 max-sm:mt-16"
         style={{
             scale: scrollYProgress,
             opacity: scrollYProgress
         }}
-    >
+        >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
         I am a web programming enthusiast; I graduated vocational high school with a <span className="font-medium">Multimedia School Major</span>. The first
@@ -50,6 +55,7 @@ function About() {
         <span className="font-bold">learning new things</span>, I am currently{" "}
         <span className="font-bold">learning psychology and philosophy</span>.
       </p>
+      </motion.div>
     </motion.section>
   );
 }
