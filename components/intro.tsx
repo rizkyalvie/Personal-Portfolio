@@ -35,22 +35,22 @@ function Intro() {
         </div>
       </div>
 
-      <motion.p
+      <motion.h1
         className="mb-10 mt-7 px-4 text-2xl font-medium !Leading-[1.5] sm:text-4xl"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
         <span className="font-bold">Hello! I am Rizky Alvie</span>.{" I am a "}
-        <span className="font-bold">Front End Developer</span>.
+        <span className="font-bold">Frontend Developer</span>.
         {" I enjoy building "}
         <span className="italic">sites & apps</span>.
         {" I also enjoy tinkering with Front End "}
         <span className="italic">frameworks & libraries</span>.{" My focus is "}
         <span className="underline">React (Next.js)</span>.
-      </motion.p>
+      </motion.h1>
 
       <motion.div 
-        className="flex flex-col gap-2 items-center justify-center px-4 text-lg font-medium sm:flex-row"
+        className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
@@ -59,13 +59,13 @@ function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-slate-800 text-white py-3 px-7 rounded-full flex justify-center items-center gap-2 focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-100 transition"
+          className="group bg-slate-800 py-3 px-7 rounded-full flex justify-center items-center gap-2 text-white focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-100 transition"
         >
           Contact me here <BsArrowRight className="opacity-60 group-hover:translate-x-1"/>
         </Link>
         <a 
             href="/CV_Ananda_Rizky_Alvie_Nuryahya.pdf"
-            className="group bg-white py-3 px-7 rounded-full border border-black/10 flex justify-center items-center gap-2 focus:scale-105 hover:scale-105 hover:bg-zinc-100 active:scale-100 transition"
+            className="group bg-white py-3 px-7 rounded-full flex justify-center items-center gap-2 border border-black/10 focus:scale-105 hover:scale-105 hover:bg-zinc-100 active:scale-100 transition"
             download
         >
             Download CV <HiDownload className="opacity-60 group-hover:animate-bounce"/>
