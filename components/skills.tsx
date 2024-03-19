@@ -40,7 +40,7 @@ function Skills() {
                     key={index}
                 >
                     <motion.li 
-                    className="bg-white border border-black/[0.1] py-3 px-5 rounded-xl"
+                    className="bg-white borderBlack py-3 px-5 rounded-xl dark:text-gray-950"
                     variants={fadeInAnimationVariants}
                     initial="initial"
                     whileInView="animate"

@@ -18,7 +18,7 @@ function About() {
     >
       <motion.div 
         ref={animationRef} 
-        className="mt-28 max-w-[45rem] text-center leading-8 max-sm:scroll-mt-14 max-sm:mt-6"
+        className="mt-28 max-w-[45rem] text-center leading-8 max-sm:scroll-mt-24 max-sm:mt-11"
         style={{
             scale: scrollYProgress,
             opacity: scrollYProgress

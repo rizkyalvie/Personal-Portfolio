@@ -13,7 +13,7 @@ function Projects() {
 
   return (
     <motion.section
-        className="mt-28 max-w-[45rem] text-center scroll-mt-36 max-sm:scroll-mt-40"
+        className="mt-28 max-w-[45rem] text-center scroll-mt-36 max-sm:scroll-mt-36"
         style={{
             scale: scrollYProgress,
             opacity: scrollYProgress

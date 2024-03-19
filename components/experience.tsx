@@ -13,8 +13,12 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+import { useTheme } from "@/context/theme-context";
+
 
 function Experience() {
+    
+  const { theme, toggleTheme } = useTheme();
 
   const { ref } = useSectionInView("Experience", 0.5);
 
@@ -29,7 +33,7 @@ function Experience() {
         {experiencesData.map((item, index) => (
             <VerticalTimelineElement
               contentStyle={{
-                background: '#f3f4f6',
+                background: theme === 'light' ? '#f3f4f6' : 'rgba(255, 255, 255, 0.5)',
                 boxShadow: 'none',
                 border: '1px solid rgba(0, 0, 0, 0.05)',
                 textAlign:'left',
@@ -37,12 +41,12 @@ function Experience() {
               }}
               className="mx-3"
               contentArrowStyle={{
-                borderRight: '0.4rem solid #9ca3af',
+                borderRight: theme === 'light' ? '0.4rem solid #9ca3af' : '0.4rem solid rgba(255, 255, 255, 0.15)',
               }}
               date={item.date}
               icon={item.icon}
               iconStyle={{
-                background: 'white',
+                background: theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.5)',
                 transform: 'scale(0.8)',
                 fontSize: '2rem'
               }}
@@ -50,13 +54,13 @@ function Experience() {
               visible
             >
               <h3
-                className="font-semibold capitalize"
+                className="font-semibold capitalize dark:text-white/75"
               >{item.title}</h3>
               <p
-                className="font-normal !mt-0"
+                className="font-normal !mt-0 text-gray-950 dark:text-white/75"
               >{item.location}</p>
               <p
-                className="!font-normal !mt-1 text-gray-700"
+                className="!font-normal !mt-1 text-gray-700 dark:text-white/75"
               >{item.description}</p>
             </VerticalTimelineElement>
         )

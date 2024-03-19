@@ -9,14 +9,17 @@ import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
 import { FaGithubSquare } from "react-icons/fa";
 import { BsLinkedin, BsArrowRight } from "react-icons/bs";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { links } from "@/lib/data";
 
 function Intro() {
 
   const { ref } = useSectionInView('Home', 0.5)
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
 
   return (
     <section 
-      className="max-w-[45rem] text-center sm:mb-0 scroll-mt-28"
+      className="max-w-[45rem] text-center sm:mb-0 scroll-mt-36"
       id='home'
       ref={ref}
     >
@@ -68,12 +71,16 @@ function Intro() {
         <Link
           href="#contact"
           className="group bg-slate-800 py-3 px-7 rounded-full flex justify-center items-center gap-2 text-white focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-100 transition"
+          onClick={() => {
+            setActiveSection("Contact")
+            setTimeOfLastClick(Date.now())
+          }}
         >
           Contact me here <BsArrowRight className="opacity-60 group-hover:translate-x-1"/>
         </Link>
         <a 
             href="/CV_Ananda_Rizky_Alvie_Nuryahya.pdf"
-            className="group bg-white py-3 px-7 rounded-full flex justify-center items-center gap-2 border border-black/10 focus:scale-105 hover:scale-105 hover:bg-zinc-100 active:scale-100 transition"
+            className="group bg-white py-3 px-7 rounded-full flex justify-center items-center gap-2 borderBlack focus:scale-105 hover:scale-105 hover:bg-zinc-100 active:scale-100 transition dark:bg-white/10 dark:text-white/80"
             download
         >
             Download CV <HiDownload className="opacity-60 group-hover:animate-bounce"/>
@@ -82,14 +89,14 @@ function Intro() {
           <a
             href="https://www.linkedin.com/in/rizkyalvie"
             target="_blank"
-            className="bg-white p-4 rounded-full border border-black/10 text-gray-700 focus:scale-105 hover:scale-105 active:scale-100 hover:text-gray-950"
+            className="bg-white p-4 rounded-full borderBlack text-gray-700 focus:scale-105 hover:scale-105 active:scale-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/80"
           >
             <BsLinkedin />
           </a>
           <a
             href="https://github.com/rizkyalvie"
             target="_blank"
-            className="bg-white p-3.5 rounded-full border border-black/10 text-gray-700 text-[1.35rem] focus:scale-105 hover:scale-105 active:scale-100 hover:text-gray-950"
+            className="bg-white p-3.5 rounded-full borderBlack text-gray-700 text-[1.35rem] focus:scale-105 hover:scale-105 active:scale-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/80"
           >
             <FaGithubSquare />
           </a>
