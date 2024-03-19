@@ -1,11 +1,13 @@
 import React from "react";
 
-import { LuGraduationCap } from "react-icons/lu"
 import { CgWorkAlt } from "react-icons/cg"
+import { LuGraduationCap } from "react-icons/lu"
+
+import typedocImg from "@/public/typedoc.png"
 import waysbookImg from "@/public/waysbook.png"
 import dumbmerchImg from "@/public/dumbmerch.png"
-import typedocImg from "@/public/typedoc.png"
 
+// Page name and hash to give it a name and auto scrolling
 export const links = [
     {
         name: "Home",
@@ -33,6 +35,7 @@ export const links = [
     },
 ] as const;
 
+// My Skills, nothing much
 export const skillsData = [
     {
         name: "HTML",
@@ -100,6 +103,7 @@ export const skillsData = [
     },
 ] as const;
 
+// ALl my projects
 export const projectsData = [
     {
         title: 'DTC Documentation',
@@ -127,6 +131,7 @@ export const projectsData = [
     },
 ] as const;
 
+// All my professional experience
 export const experiencesData = [
     {
         title: "Front End Developer",

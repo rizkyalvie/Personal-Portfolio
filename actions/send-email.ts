@@ -2,17 +2,21 @@
 
 import React from "react"
 
-import { Resend } from "resend"
-import { validateString, getErrorMessage } from "@/lib/utils"
 import ContactFormEmail from "@/email/contact-form-email"
+import { validateString, getErrorMessage } from "@/lib/utils"
+
+import { Resend } from "resend"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
+
 
 export const sendEmail = async (formData: FormData) => {
 
     const senderEmail = formData.get('email')
     const message = formData.get('message')
 
+    //A statement to validate user's input with the first parameter being the anything that the users input
+    //and second parameter being the max length of characters that users allowed to input
     if (!validateString(senderEmail, 500)){
         return ({
             error: "Invalid E-mail"
@@ -26,7 +30,10 @@ export const sendEmail = async (formData: FormData) => {
     }
 
     let data;
+    //A statement to be tested for errors while being executed
     try {
+        //Injecting all of the properties and values that the user will send, mostly just the message and the user's email
+        //because anything else is hardcoded
         data = await resend.emails.send({
             from: 'Portfolio Contact<onbarding@resend.dev>',
             to: 'alvienuryahya@gmail.com',

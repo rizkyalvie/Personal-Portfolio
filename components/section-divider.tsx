@@ -1,7 +1,10 @@
 'use client'
+
 import React from 'react'
+
 import { motion } from 'framer-motion'
 
+//Currenty a useless component because I don't really like it but I will keep it incase I need it later
 function SectionDivider() {
   return (
     <motion.div 

@@ -4,13 +4,14 @@ import React from 'react'
 import SectionHeading from './section-heading'
 import { skillsData } from '@/lib/data'
 import { useSectionInView } from '@/lib/hooks'
-import { useScrollAnimation } from '@/lib/hooks'
 import { motion } from 'framer-motion'
 
 function Skills() {
 
+    //This is responsible for the moving effect behind every button text in navbar, go to the path file to see more
     const { ref } = useSectionInView('Skills', 0.8)
-    // const { animationRef, scrollYProgress } = useScrollAnimation('1 1')
+
+    //This s a declaration to contain style properties and values for a one-time animation when the skills pop up when appearing in view
     const fadeInAnimationVariants = {
         initial: {
             opacity: 0,

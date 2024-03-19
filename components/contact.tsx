@@ -15,6 +15,7 @@ import toast from 'react-hot-toast'
 
 function Contact() {
 
+    //Go to the designated file path to see more about these functions
     const { ref } = useSectionInView('Contact', 0.5)
     const { animationRef, scrollYProgress } = useScrollAnimation('0.5 1')
 

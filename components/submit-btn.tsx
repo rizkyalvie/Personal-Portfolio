@@ -5,6 +5,8 @@ import { FaPaperPlane } from "react-icons/fa";
 import { useFormStatus } from "react-dom";
 
 function SubmitBtn() {
+
+  //Getting a pending status property from "react-dom" to style a loading animation based on form progression status
   const { pending } = useFormStatus();
 
   return (

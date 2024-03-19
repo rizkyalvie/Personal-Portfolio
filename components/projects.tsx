@@ -1,23 +1,25 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+
 import SectionHeading from "./section-heading";
 
-import { useSectionInView, useScrollAnimation } from "@/lib/hooks";
-import { motion, useTransform } from "framer-motion";
 import { projectsData } from "@/lib/data";
+import { useSectionInView, useScrollAnimation } from "@/lib/hooks";
 
+import { motion, useTransform } from "framer-motion";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
 
-import Image from "next/image";
 
 function Projects() {
 
+  //This is responsible for the moving effect behind every button text in navbar, go to the path file to see more
   const { ref } = useSectionInView('Projects', 0.5)
 
   return (
     <motion.section
-      className="mt-28 max-w-[45rem] text-center scroll-mt-36 sm:scroll-mt-28"
+      className="mt-28 max-w-[45rem] text-center scroll-mt-28 sm:scroll-mt-28"
       id="projects"
       ref={ref}
     >
@@ -59,7 +61,7 @@ function Project({
             }}
     >
       <div
-        className=" py-4 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col sm:mt-auto h-full group-odd:ml-[18rem]"
+        className="py-4 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col sm:mt-auto h-full sm:group-odd:ml-[18rem]"
       >
         <a href={projectUrl} target="_blank"><h3 className="text-lg font-semibold text-left flex gap-x-2">{title} <BsBoxArrowInUpRight /></h3></a>
         <p className="mt-2 leading-relaxed text-gray-700 text-left dark:text-white/70">{description}</p>
@@ -80,7 +82,7 @@ function Project({
         src={imageUrl}
         alt="Projects I worked on"
         quality="95"
-        className="absolute top-12 -right-56 w-[32.25rem] rounded-t-lg shadow-2xl
+        className="absolute hidden sm:block top-12 -right-56 w-[32.25rem] rounded-t-lg shadow-2xl
                     transition-all
                     group-odd:right-0 
                     group-odd:-left-56

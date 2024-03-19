@@ -1,21 +1,22 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
 
 import { motion } from "framer-motion";
 import { HiDownload } from "react-icons/hi";
-import { useSectionInView } from "@/lib/hooks";
 import { FaGithubSquare } from "react-icons/fa";
 import { BsLinkedin, BsArrowRight } from "react-icons/bs";
+
+import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { links } from "@/lib/data";
 
 function Intro() {
 
+  //Go to the designated file path to see more about these functions
   const { ref } = useSectionInView('Home', 0.5)
-  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
 
   return (
     <section 
@@ -79,7 +80,7 @@ function Intro() {
           Contact me here <BsArrowRight className="opacity-60 group-hover:translate-x-1"/>
         </Link>
         <a 
-            href="/CV_Ananda_Rizky_Alvie_Nuryahya.pdf"
+            href="/cv_rizky_alvie.pdf"
             className="group bg-white py-3 px-7 rounded-full flex justify-center items-center gap-2 borderBlack focus:scale-105 hover:scale-105 hover:bg-zinc-100 active:scale-100 transition dark:bg-white/10 dark:text-white/80"
             download
         >

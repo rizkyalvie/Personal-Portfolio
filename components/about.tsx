@@ -8,6 +8,7 @@ import { motion } from "framer-motion"
 
 function About() {
 
+  //Go to the designated file path to see more about these functions
   const { ref } = useSectionInView('About', 0.5)
   const { animationRef, scrollYProgress } = useScrollAnimation('1 1')
 
@@ -18,7 +19,7 @@ function About() {
     >
       <motion.div 
         ref={animationRef} 
-        className="mt-28 max-w-[45rem] text-center leading-8 max-sm:scroll-mt-24 max-sm:mt-11"
+        className="mt-10 max-w-[45rem] text-center leading-8 scroll-mt-16 sm:scroll-mt-24 sm:mt-28"
         style={{
             scale: scrollYProgress,
             opacity: scrollYProgress

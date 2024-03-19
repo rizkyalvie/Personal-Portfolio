@@ -1,15 +1,18 @@
 "use client";
 import React from "react";
-
 import Link from "next/link";
+
 import { cn } from  "@/lib/utils"
 import { links } from "@/lib/data";
-import { motion } from "framer-motion";
+
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { BsLinkedin } from "react-icons/bs";
+
+import { motion } from "framer-motion";
+
 
 export default function Header() {
 
+  //This function is responsible for the moving effect behind every button text in navbar, go to the path file to see more
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
 
   return (

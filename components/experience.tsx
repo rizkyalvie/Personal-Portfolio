@@ -18,8 +18,8 @@ import { useTheme } from "@/context/theme-context";
 
 function Experience() {
     
+  //Go to the designated file path to see more about these functions
   const { theme, toggleTheme } = useTheme();
-
   const { ref } = useSectionInView("Experience", 0.5);
 
   return (

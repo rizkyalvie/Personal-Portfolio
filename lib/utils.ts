@@ -1,10 +1,12 @@
-import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
+import { type ClassValue, clsx } from "clsx"
 
+// More on shadcn.ui
 export const cn = (
   ...inputs: ClassValue[]
   ) => ((twMerge(clsx(inputs))))
 
+// A function to validate a contact form input before sending
 export const validateString = (
   value: unknown,
   maxLength: number
@@ -16,6 +18,7 @@ export const validateString = (
   return true;
 };
 
+// A function to get and send an error message
 export const getErrorMessage = (error: unknown): string => {
 
   let message: string;
