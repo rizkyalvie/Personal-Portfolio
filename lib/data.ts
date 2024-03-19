@@ -2,6 +2,9 @@ import React from "react";
 
 import { LuGraduationCap } from "react-icons/lu"
 import { CgWorkAlt } from "react-icons/cg"
+import waysbookImg from "@/public/waysbook.png"
+import dumbmerchImg from "@/public/dumbmerch.png"
+import typedocImg from "@/public/typedoc.png"
 
 export const links = [
     {
@@ -94,6 +97,33 @@ export const skillsData = [
     {
         name: "Adobe Illustrator",
         url: "https://www.adobe.com/products/illustrator.html"
+    },
+] as const;
+
+export const projectsData = [
+    {
+        title: 'DTC Documentation',
+        description: 'A Discount & Tax Calculator with a TypeScript code documentation',
+        tags: ["React", "Next.js", "Typedoc"],
+        imageUrl: typedocImg,
+        status: 'Completed',
+        projectUrl: 'https://project-typedoc.vercel.app'
+    },
+    {
+        title: 'Waysbook',
+        description: 'Online bookshelf of favorite books that I have read',
+        tags: ["React", "Next.js", "Tailwind", "TypeScript"],
+        imageUrl: waysbookImg,
+        status: 'Active - Ongoing',
+        projectUrl: ''
+    },
+    {
+        title: 'DumbMerch',
+        description: 'E-Commerce with automated payment and admin chatting feature',
+        tags: ["React", "Next.js", "Tailwind", "PostgreSQL", "Prisma"],
+        imageUrl: dumbmerchImg,
+        status: 'Plan & Prepare',
+        projectUrl: ''
     },
 ] as const;
 
