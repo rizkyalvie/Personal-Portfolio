@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 
 function About() {
 
-  const { ref } = useSectionInView('About', 0.8)
+  const { ref } = useSectionInView('About', 0.5)
   const { animationRef, scrollYProgress } = useScrollAnimation('1 1')
 
   return (
@@ -18,7 +18,7 @@ function About() {
     >
       <motion.div 
         ref={animationRef} 
-        className="mt-28 mb-28 max-w-[45rem] text-center leading-8 max-sm:mt-16"
+        className="mt-28 max-w-[45rem] text-center leading-8 max-sm:scroll-mt-14 max-sm:mt-6"
         style={{
             scale: scrollYProgress,
             opacity: scrollYProgress
@@ -43,7 +43,7 @@ function About() {
         </span>
         , I am also familiar with TypeScript and Prisma. I am always looking to
         learn new technologies and I am currently looking for a{" "}
-        <span className="font-bold">full-time position</span> as a Frontend
+        <span className="font-bold">full-time position</span> as a front-end
         Developer.
       </p>
       <p>

@@ -16,7 +16,7 @@ function Intro() {
 
   return (
     <section 
-      className="mb-28 max-w-[45rem] text-center sm:mb-0 scroll-mt-28"
+      className="max-w-[45rem] text-center sm:mb-0 scroll-mt-28"
       id='home'
       ref={ref}
     >
@@ -49,10 +49,10 @@ function Intro() {
         animate={{ y: 0, opacity: 1 }}
       >
         <span className="font-bold">Hello! I am Rizky Alvie</span>.{" I am a "}
-        <span className="font-bold">Frontend Developer</span>.
+        <span className="font-bold">front-end developer</span>.
         {" I enjoy building "}
         <span className="italic">sites & apps</span>.
-        {" I also enjoy tinkering with Frontend "}
+        {" I also enjoy tinkering with front end "}
         <span className="italic">frameworks & libraries</span>.{" My focus is "}
         <span className="underline">React (Next.js)</span>.
       </motion.h1>

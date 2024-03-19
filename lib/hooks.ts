@@ -1,8 +1,10 @@
-import { SectionName } from "./types"
 import { useEffect, useRef } from "react"
+
+import { SectionName } from "./types"
+import { useActiveSectionContext } from "@/context/active-section-context"
+
 import { useScroll } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { useActiveSectionContext } from "@/context/active-section-context"
 
 export function useSectionInView(sectionName: SectionName, threshold: number) {
 
