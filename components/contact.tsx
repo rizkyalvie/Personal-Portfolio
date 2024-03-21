@@ -48,7 +48,7 @@ function Contact() {
 
                 toast.success("Email sent successfully")
             }}
-            className="mt-10 flex flex-col"
+            className="mt-10 flex flex-col dark:text-gray-950"
         >
             <input 
                 type='email'
