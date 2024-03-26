@@ -147,4 +147,11 @@ export const experiencesData = [
         icon: React.createElement(LuGraduationCap),
         date: "2022"
     },
+    {
+        title: "IT Specialist",
+        location: "South Jakarta, Indonesia",
+        description: "I worked as a IT Specialist for 6 months at PT Sucofindo",
+        icon: React.createElement(CgWorkAlt),
+        date: "2021"
+    },
 ] as const;
