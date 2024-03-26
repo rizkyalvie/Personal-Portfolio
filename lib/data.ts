@@ -114,8 +114,8 @@ export const projectsData = [
         projectUrl: 'https://project-typedoc.vercel.app'
     },
     {
-        title: 'Waysbook',
-        description: 'Online bookshelf of favorite books that I have read',
+        title: 'KEL',
+        description: 'An online bookshelf of favorite books that I have read',
         tags: ["React", "Next.js", "Tailwind", "TypeScript"],
         imageUrl: waysbookImg,
         status: 'Active - Ongoing',
