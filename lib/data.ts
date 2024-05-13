@@ -115,10 +115,10 @@ export const projectsData = [
     },
     {
         title: 'KEL',
-        description: 'Online bookshelf of favorite books that I have read',
+        description: 'An online bookshelf of favorite books that I have read',
         tags: ["React", "Next.js", "Tailwind", "TypeScript"],
         imageUrl: kelsEpic,
-        status: 'Active - Ongoing',
+        status: 'Completed',
         projectUrl: 'https://kelsepiclibrary.vercel.app'
     },
     {
