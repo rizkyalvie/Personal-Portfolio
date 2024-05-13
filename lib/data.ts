@@ -4,7 +4,7 @@ import { CgWorkAlt } from "react-icons/cg"
 import { LuGraduationCap } from "react-icons/lu"
 
 import typedocImg from "@/public/typedoc.png"
-import waysbookImg from "@/public/waysbook.png"
+import kelsEpic from "@/public/kelibrary.png"
 import dumbmerchImg from "@/public/dumbmerch.png"
 
 // Page name and hash to give it a name and auto scrolling
@@ -114,12 +114,12 @@ export const projectsData = [
         projectUrl: 'https://project-typedoc.vercel.app'
     },
     {
-        title: 'Waysbook',
+        title: 'KEL',
         description: 'Online bookshelf of favorite books that I have read',
         tags: ["React", "Next.js", "Tailwind", "TypeScript"],
-        imageUrl: waysbookImg,
+        imageUrl: kelsEpic,
         status: 'Active - Ongoing',
-        projectUrl: ''
+        projectUrl: 'https://kelsepiclibrary.vercel.app'
     },
     {
         title: 'DumbMerch',
@@ -146,5 +146,12 @@ export const experiencesData = [
         description: "I graduated after 3 months of studying. I immediately found a job as a front-end developer",
         icon: React.createElement(LuGraduationCap),
         date: "2022"
+    },
+    {
+        title: "IT Specialist",
+        location: "South Jakarta, Indonesia",
+        description: "I worked as a IT Specialist for 6 months at PT Sucofindo",
+        icon: React.createElement(CgWorkAlt),
+        date: "2021"
     },
 ] as const;
