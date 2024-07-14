@@ -13,15 +13,14 @@ import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 function Intro() {
-
   //Go to the designated file path to see more about these functions
-  const { ref } = useSectionInView('Home', 0.5)
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
+  const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
-    <section 
+    <section
       className="max-w-[45rem] text-center sm:mb-0 scroll-mt-36"
-      id='home'
+      id="home"
       ref={ref}
     >
       <div className="flex items-center justify-center">
@@ -35,7 +34,7 @@ function Intro() {
             }}
           >
             <Image
-              src="https://media.licdn.com/dms/image/D5603AQF1uvvXnzmv-Q/profile-displayphoto-shrink_200_200/0/1710505187646?e=1715817600&v=beta&t=3UTsqvRLbrQULAXZXK9SN_oxF_fgKZ1eooWsvC896YY"
+              src="https://i.imgur.com/rdxRnlX.png"
               alt="Test Image"
               width="192"
               height="193"
@@ -61,30 +60,32 @@ function Intro() {
         <span className="underline">React (Next.js)</span>.
       </motion.h1>
 
-      <motion.div 
+      <motion.div
         className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
-            delay: 0.1
+          delay: 0.1,
         }}
       >
         <Link
           href="#contact"
           className="group bg-slate-800 py-3 px-7 rounded-full flex justify-center items-center gap-2 text-white focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-100 transition"
           onClick={() => {
-            setActiveSection("Contact")
-            setTimeOfLastClick(Date.now())
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here <BsArrowRight className="opacity-60 group-hover:translate-x-1"/>
+          Contact me here{" "}
+          <BsArrowRight className="opacity-60 group-hover:translate-x-1" />
         </Link>
-        <a 
-            href="/cv_rizky_alvie.pdf"
-            className="group bg-white py-3 px-7 rounded-full flex justify-center items-center gap-2 borderBlack focus:scale-105 hover:scale-105 hover:bg-zinc-100 active:scale-100 transition dark:bg-white/10 dark:text-white/80"
-            download
+        <a
+          href="/cv_rizky_alvie.pdf"
+          className="group bg-white py-3 px-7 rounded-full flex justify-center items-center gap-2 borderBlack focus:scale-105 hover:scale-105 hover:bg-zinc-100 active:scale-100 transition dark:bg-white/10 dark:text-white/80"
+          download
         >
-            Download CV <HiDownload className="opacity-60 group-hover:animate-bounce"/>
+          Download CV{" "}
+          <HiDownload className="opacity-60 group-hover:animate-bounce" />
         </a>
         <div className="flex justify-center items-center gap-2">
           <a
